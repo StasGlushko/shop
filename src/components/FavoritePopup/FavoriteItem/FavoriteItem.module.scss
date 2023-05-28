@@ -1,0 +1,39 @@
+.item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+
+	max-width: 100%;
+	.image {
+		img {
+			max-width: 100px;
+            height: auto;
+		}
+	}
+
+	.info {
+		flex: auto;
+	}
+
+	.close {
+		svg {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			transition: all 0.3s ease;
+
+			width: 25px;
+			height: auto;
+
+			padding: 3px;
+			border-radius: 3px;
+			border: 1px solid #fff;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.169);
+				border: 1px solid rgb(117, 117, 117);
+			}
+		}
+	}
+}

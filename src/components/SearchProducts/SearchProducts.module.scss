@@ -1,0 +1,99 @@
+.searchWrapper {
+	padding: 30px 30px 0;
+	display: flex;
+	gap: 10px;
+	justify-content: space-between;
+	align-items: center;
+
+	.searchTitle {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		.back {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			transition: all 0.3s ease;
+
+			width: 25px;
+			height: auto;
+
+			padding: 3px;
+			border-radius: 3px;
+			border: 1px solid #fff;
+
+			svg {
+				width: 100%;
+				height: 100%;
+				color: black;
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.169);
+				border: 1px solid rgb(117, 117, 117);
+			}
+		}
+	}
+
+	.inputWrap {
+		position: relative;
+		width: 250px;
+		height: 35px;
+
+		input {
+			border: 1px solid rgb(117, 117, 117);
+			border-radius: 5px;
+			outline: none;
+			background-color: #fff;
+			color: #000;
+
+			width: 100%;
+			height: 100%;
+
+			padding: 5px 30px 5px 8px;
+
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			transition: all 0.3s ease;
+
+			&:focus,
+			&:hover {
+				box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.04),
+					7px 7px 7px rgba(0, 0, 0, 0.04),
+					12px 12px 12px rgba(0, 0, 0, 0.04),
+					17px 17px 17px rgba(0, 0, 0, 0.04);
+			}
+		}
+		.search {
+			svg {
+				position: absolute;
+				right: 5px;
+				top: 50%;
+				z-index: 1;
+				transform: translateY(-50%);
+
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				transition: all 0.3s ease;
+
+
+				width: 25px;
+				height: auto;
+
+				padding: 3px;
+				border-radius: 3px;
+				border: 1px solid #fff;
+				color: #000;
+
+				&:hover {
+					background-color: rgba(0, 0, 0, 0.169);
+					border: 1px solid rgb(117, 117, 117);
+				}
+			}
+		}
+	}
+}
