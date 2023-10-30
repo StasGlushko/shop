@@ -4,6 +4,7 @@ import { IProduct } from '../../types/product.interface'
 
 const initialState: IFavoriteInitialState = {
 	items: [],
+	selectedFavorites: false,
 	favoriteIsOpen: false,
 	maxCount: 10,
 }
@@ -23,6 +24,10 @@ const favorite = createSlice({
 			if (isExist)
 				state.items = state.items.filter(el => el.id !== payload.id)
 			else state.items.push(payload)
+
+			if(state.items.length > 0)
+				state.selectedFavorites = true
+			else state.selectedFavorites = false
 		},
 		toggleIsCartInFavorite: (
 			state,

@@ -49,7 +49,7 @@ export const Product: FC<IProps> = ({
 					{isCart ? 'Remove from cart' : 'Add To Cart'}
 				</Button>
 				<HiOutlineHeart
-					className={styles.heart + ' ' + (isFavorite ? styles.added : '')}
+					className={styles.heart + ' ' + (isFavorite && styles.added)}
 					onClick={() => toggleProductFavorite(item)}
 				/>
 			</div>

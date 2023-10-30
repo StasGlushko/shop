@@ -1,14 +1,20 @@
 import styles from './Header.module.scss'
 import { FiHeart, FiShoppingCart, FiUser } from 'react-icons/fi'
-import { FC } from 'react';
+import { FC } from 'react'
 
 interface IProps {
 	cartOpen: () => void
 	favoriteOpen: () => void
 	countCart: number
+	selectedFavorites: boolean
 }
 
-export const Header: FC<IProps> = ({ cartOpen, favoriteOpen, countCart }) => {
+export const Header: FC<IProps> = ({
+	cartOpen,
+	favoriteOpen,
+	countCart,
+	selectedFavorites,
+}) => {
 	return (
 		<header>
 			<div className={styles.left}>
@@ -20,7 +26,11 @@ export const Header: FC<IProps> = ({ cartOpen, favoriteOpen, countCart }) => {
 					<span>{countCart}</span>
 				</li>
 				<li onClick={favoriteOpen}>
-					<FiHeart />
+					<FiHeart
+						className={
+							styles.heart + ' ' + (selectedFavorites && styles.selFav)
+						}
+					/>
 				</li>
 				<li>
 					<FiUser />

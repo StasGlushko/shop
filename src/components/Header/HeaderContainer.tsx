@@ -5,6 +5,7 @@ import { FC } from 'react';
 
 export const HeaderContainer: FC = () => {
 	const { count } = useTypedSelector(state => state.cart)
+	const { selectedFavorites } = useTypedSelector(state => state.favorite)
 	const { toggleCartOpen, toggleFavoriteOpen } = useActions()
 
 
@@ -21,6 +22,7 @@ export const HeaderContainer: FC = () => {
 			countCart={count}
 			cartOpen={cartOpen}
 			favoriteOpen={favoriteOpen}
+			selectedFavorites={selectedFavorites}
 		/>
 	)
 }
